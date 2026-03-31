@@ -80,7 +80,7 @@ AIChatbot/
 
 ## Getting Your API Key
 
-1. Sign up at [https://console.anthropic.com](https://console.anthropic.com)
+1. Sign up at [https://aistudio.com](https://aistudio.google.com)
 2. Navigate to **API Keys** → **Create Key**
 3. Copy the key (it starts with `sk-ant-`)
 
