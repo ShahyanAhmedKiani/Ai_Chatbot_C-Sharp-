@@ -1,0 +1,41 @@
+version: '3.9'
+
+# ============================================================
+# AI Chatbot — docker-compose.yml
+#
+# Usage:
+#   docker compose up --build
+#
+# Set your API key:
+#   Option A — Environment variable (recommended):
+#     ANTHROPIC__APIKEY=sk-ant-... docker compose up
+#
+#   Option B — Edit appsettings.json before building
+# ============================================================
+
+services:
+
+  ai-chatbot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ai-chatbot:latest
+    container_name: ai_chatbot_app
+
+    # ── API key via environment (overrides appsettings.json) ──────────
+    environment:
+      - ANTHROPIC__APIKEY=${ANTHROPIC_API_KEY:-}
+
+    # ── Mount a local appsettings.json to supply config at runtime ────
+    volumes:
+      - ./AIChatbot/appsettings.json:/app/appsettings.json:ro
+
+    # ── Windows GUI apps need display forwarding ──────────────────────
+    # On Windows host with Docker Desktop:
+    #   No extra steps needed — run natively on Windows containers.
+    # On Linux/macOS with VcXsrv or X11 forwarding, map display:
+    #   environment:
+    #     - DISPLAY=host.docker.internal:0.0
+
+    restart: "no"
+    platform: windows/amd64
