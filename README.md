@@ -1,8 +1,8 @@
 # AI Chatbot — .NET 8 Windows Forms + Claude API
-
+![Project Screenshot](Step1.png)
 > **Assignment #2 — AI-Based Mini Project**  
 > A fully-featured AI chat application built with Windows Forms and the Google Claude API.
-![Project Screenshot](screenshot.png)
+
 ---
 
 ## Table of Contents
