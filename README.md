@@ -180,6 +180,11 @@ ANTHROPIC_API_KEY=sk-ant-YOUR_KEY docker compose up --build
 
 ---
 
+## Screenshots
+![Project Screenshot](Step1.png)
+![Project Screenshot](Step2.png)
+![Project Screenshot](Step3.png)
+![Project Screenshot](Step4.png)
 ## Configuration Reference
 
 `appsettings.json`:
